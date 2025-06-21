@@ -59,11 +59,12 @@
             class="w-full rounded-lg"
           />
           <div class="mt-4">
-            <h2 class="text-2xl font-semibold">SuperList</h2>
+            <h2 class="text-2xl font-semibold">MyFolio</h2>
             <p class="text-gray-300 mt-2">
              Developed a console-based Portfolio Generator with multiple templates to help tech and non-tech students to create customized portfolios.
             </p>
             <button
+             onclick="showDetails()"
               
               class="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:opacity-90"
             >
@@ -85,7 +86,7 @@
             Designed an animated and concept-driven team portfolio for a college project, featuring a unique and innovative approach.
             </p>
             <button
-              
+               onclick="showDetails()"
               class="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:opacity-90"
             >
               Learn More
@@ -106,6 +107,7 @@
             Developed a feature-rich to-do list application, "Superlist," enabling efficient task management with advanced functionalities like prioritization, collaboration, and seamless organization.
             </p>
             <button
+            onclick="showDetails()"
        
               class="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:opacity-90"
             >
@@ -125,8 +127,9 @@
     </footer>
 
     <script>
-      function showDetails(projectTitle) {
-        alert(`More details about ${projectTitle}`);
+      function showDetails() {
+        alert("feature will be available soon!!")
+      
       }
     </script>
   </body>
