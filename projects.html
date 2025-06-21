@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Projects</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(90deg, #090020, black, #090020);
+        color: white;
+        font-family: "Arial", sans-serif;
+      }
+
+      .project-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+      }
+
+      .project-title {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #heading {
+        background-color: purple;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: xx-large;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="py-6">
+      <div class="container mx-auto text-center">
+        <h1 id="heading" class="text-4xl font-bold">Our Projects</h1>
+      </div>
+    </header>
+
+    <main class="container mx-auto py-8 px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Card 1 -->
+        <div class="project-card rounded-lg p-4">
+          <img
+            src="myfolio.jpeg"
+            alt="Project Image"
+            class="w-full rounded-lg"
+          />
+          <div class="mt-4">
+            <h2 class="text-2xl font-semibold">SuperList</h2>
+            <p class="text-gray-300 mt-2">
+             Developed a console-based Portfolio Generator with multiple templates to help tech and non-tech students to create customized portfolios.
+            </p>
+            <button
+              
+              class="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:opacity-90"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card rounded-lg p-4">
+          <img
+            src="pic5.png"
+            alt="Project Image"
+            class="w-full rounded-lg"
+          />
+          <div class="mt-4">
+            <h2 class="text-2xl font-semibold">AniFolio</h2>
+            <p class="text-gray-300 mt-2">
+            Designed an animated and concept-driven team portfolio for a college project, featuring a unique and innovative approach.
+            </p>
+            <button
+              
+              class="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:opacity-90"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card rounded-lg p-4">
+          <img
+            src="super.jpeg"
+            alt="Project Image"
+            class="w-full rounded-lg"
+          />
+          <div class="mt-4">
+            <h2 class="text-2xl font-semibold">Superlist</h2>
+            <p class="text-gray-300 mt-2">
+            Developed a feature-rich to-do list application, "Superlist," enabling efficient task management with advanced functionalities like prioritization, collaboration, and seamless organization.
+            </p>
+            <button
+       
+              class="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:opacity-90"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-6">
+      <div class="container mx-auto text-center">
+        <p class="text-gray-400">
+          &copy; 2025 Our Company. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function showDetails(projectTitle) {
+        alert(`More details about ${projectTitle}`);
+      }
+    </script>
+  </body>
+</html>
