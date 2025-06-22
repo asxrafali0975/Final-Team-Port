@@ -23,14 +23,13 @@
         background-color: white;
         height: 100vh;
         width: 100vw;
-        
       }
 
       #page1 {
         height: 100%;
         width: 100%;
         background: linear-gradient(90deg, #090020, black, #090020);
-         /* border:2px solid white; */
+        /* border:2px solid white; */
         /* border-radius: 20px;  */
       }
 
@@ -64,6 +63,14 @@
       #dynamic_duo {
         text-wrap: 0;
         text-align: center;
+
+        /* background-color: red; */
+      }
+
+      #left h1 {
+        /* background-color: red; */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: smaller;
       }
 
       #image_container {
@@ -140,8 +147,13 @@
       }
 
       #works {
-        height: 20%;
-        width: 50%;
+        height: 15%;
+        width: 40%;
+        margin-top: 20px;
+      }
+      #cnt {
+        height: 15%;
+        width: 40%;
         margin-top: 20px;
       }
 
@@ -166,6 +178,13 @@
         font-size: 110%;
       }
 
+      #btn-cnt {
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
       /* responsive */
 
       @media (min-width: 800px) and (max-width: 1000px) {
@@ -173,15 +192,57 @@
           display: inline-block;
         }
 
+        #left h1 {
+          /* background-color: red; */
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: x-large;
+        }
+
+        #cnt {
+          display: none;
+        }
+
         img {
           height: 110%;
           width: 70%;
+        }
+
+        #dynamic_duo {
+          text-wrap: 0;
+          text-align: center;
+          font-size: larger;
+        }
+
+        #works {
+          padding: 1.7%;
         }
       }
 
       @media (min-width: 1000px) {
         #contactus {
           display: inline-block;
+        }
+        #works {
+          padding: 3%;
+        }
+
+        #left h1 {
+          /* background-color: red; */
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: x-large;
+        }
+
+        #cnt {
+          display: none;
+        }
+        #dynamic_duo {
+          text-wrap: 0;
+          text-align: center;
+          font-size: larger;
+        }
+
+        #right button {
+          padding: 1.7%;
         }
 
         #mainbody {
@@ -201,11 +262,21 @@
         #purple_text,
         #purple_tex,
         #typed-output {
-          font-size: 130%;
+          font-size: 110%;
         }
         img {
           height: 120%;
           width: 80%;
+        }
+
+        #purple_text,
+        #typed-output,
+        #typed-output2,
+        #typed-output3 {
+          font-size: small;
+          font-weight: 900;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 110%;
         }
       }
 
@@ -214,12 +285,30 @@
           height: 120%;
           width: 80%;
         }
+        #cnt {
+          display: none;
+        }
+      }
+
+      #left h1 {
+        /* background-color: red; */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: x-large;
+      }
+
+      #dynamic_duo {
+        text-wrap: 0;
+        text-align: center;
+        font-size: x-large;
       }
 
       @media (min-width: 1600px) {
         img {
           height: 180%;
           width: 70%;
+        }
+        #cnt {
+          display: none;
         }
       }
     </style>
@@ -233,11 +322,15 @@
           </div>
 
           <div id="right">
-            <button type="button" class="btn btn-outline-light">
-              <a href="/aboutus.html">AboutUs</a>
-            </button>
-            <button type="button" id="contactus" class="btn btn-outline-light">
+            <button type="button" class="btn btn-outline-light btn-sm">
               <a href="/ContactUs.html">ContactUs</a>
+            </button>
+            <button
+              type="button"
+              id="contactus"
+              class="btn btn-outline-light btn-sm"
+            >
+              <a href="/aboutus.html">AboutUs</a>
             </button>
           </div>
         </nav>
@@ -256,9 +349,15 @@
               <div id="typo">
                 <div id="typed-output"></div>
               </div>
-              <button type="button" id="works" class="btn btn-outline-light">
-                <a href="projects.html">Our Works</a>
-              </button>
+
+              <div id="btn-cnt">
+                <button type="button" id="works" class="btn btn-outline-light">
+                  <a href="projects.html">Our Works</a>
+                </button>
+                <button type="button" id="cnt" class="btn btn-outline-light">
+                  <a href="aboutus.html">AboutUs</a>
+                </button>
+              </div>
             </h1>
           </div>
         </div>
@@ -278,61 +377,61 @@
     ></script>
 
     <script>
-      let tl = gsap.timeline();
+      // let tl = gsap.timeline();
 
-      tl.from("#page1", {
-        scale: 0,
-        delay: 0.7,
-        duration: 1,
-        opacity: 0,
-      });
+      // tl.from("#page1", {
+      //   scale: 0,
+      //   delay: 0.7,
+      //   duration: 1,
+      //   opacity: 0,
+      // });
 
-      tl.from("nav", {
-        scale: 0,
-        delay: 0.5,
-        duration: 1,
-        opacity: 0,
-        y: -300,
-      });
+      // tl.from("nav", {
+      //   scale: 0,
+      //   delay: 0.5,
+      //   duration: 1,
+      //   opacity: 0,
+      //   y: -300,
+      // });
 
-      tl.from(["#left", " #right", "#textcontent"], {
-        scale: 0,
-        delay: 0.5,
-        duration: 1.4,
-        opacity: 0,
-      });
+      // tl.from(["#left", " #right", "#textcontent"], {
+      //   scale: 0,
+      //   delay: 0.5,
+      //   duration: 1.4,
+      //   opacity: 0,
+      // });
 
-      tl.from(["#imagediv", "#name"], {
-        scale: 0,
-        //  delay:1.2,
-        duration: 1.4,
-        opacity: 0,
-      });
+      // tl.from(["#imagediv", "#name"], {
+      //   scale: 0,
+      //   //  delay:1.2,
+      //   duration: 1.4,
+      //   opacity: 0,
+      // });
 
-      tl.to("#imagediv", {
-        x: 8,
-        delay: 1,
-        yoyo: true,
-        repeat: Infinity,
-      });
+      // tl.to("#imagediv", {
+      //   x: 8,
+      //   delay: 1,
+      //   yoyo: true,
+      //   repeat: Infinity,
+      // });
 
-      tl.to("#imagediv", {
-        y: -8,
-        yoyo: true,
-        repeat: Infinity,
-      });
+      // tl.to("#imagediv", {
+      //   y: -8,
+      //   yoyo: true,
+      //   repeat: Infinity,
+      // });
 
-      tl.to("#imagedv", {
-        x: -8,
-        yoyo: true,
-        repeat: Infinity,
-      });
+      // tl.to("#imagedv", {
+      //   x: -8,
+      //   yoyo: true,
+      //   repeat: Infinity,
+      // });
 
-      tl.to("#imagediv", {
-        y: 8,
-        yoyo: true,
-        repeat: Infinity,
-      });
+      // tl.to("#imagediv", {
+      //   y: 8,
+      //   yoyo: true,
+      //   repeat: Infinity,
+      // });
 
       const options = {
         strings: [
